@@ -1,5 +1,8 @@
-# This locals implement the resource correct names based on GC CAF naming convention rules
+terraform {
+  required_version = ">= 0.13"
+}
 
+# This locals implement the resource correct names based on GC CAF naming convention rules
 locals {
   maxLenght                  = var.maxLength > 90 ? 90 : var.maxLength # Make sure provided maxLenght does not exceed resource max lenght
   env_4                      = substr(var.env, 0, 4)                   # Make sure env lenght does not exceed 4
